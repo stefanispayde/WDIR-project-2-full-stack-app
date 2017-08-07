@@ -1,4 +1,4 @@
-const mongoose = ('mongoose');
+const mongoose = require('mongoose');
 
 const postSchema = mongoose.Schema({
   tag: String,
