@@ -49,9 +49,9 @@
         <section>
           <h2>Previous posts</h2>
           <ul>
-            <% for (let i = 0; i < posts.length; i++) { %> //wtf goes here if not post?????
+            <% for (let i = 0; i < posts.length; i++) { %>
             <li>
-              <a href="/posts/<%=posts[i]._id%>"><%=posts[i].title%></a>
+              <a href="/posts/<%=posts[i]._id%>"> <%=posts[i].tag%> </a>
             </li>
           <% } %>
         </ul>

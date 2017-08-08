@@ -21,8 +21,9 @@
           <h3>Write Away!</h3>
 
           <form action="/posts" method="POST">
-				        <input type="text" name="tag" /><br/>
-                <input type="text" name="write" />
+				        <input type="text" name="tag" placeholder="topic tag"/><br/>
+                <input type="text" name="title" placeholder="title"/>
+                <textarea name="entry" rows="8" cols="80"></textarea>
                 <input type="submit" value="Submit Post"/>
 			    </form>
     </main>
