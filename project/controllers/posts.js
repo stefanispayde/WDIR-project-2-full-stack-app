@@ -13,6 +13,13 @@ router.post('/', (req, res)=> {
   });
 });
 
+router.get("/:id/edit", (req, res)=> {
+  Post.findById(req.params.id, (err, foundPost)=> {
+    res.render('posts/edit.ejs', {
+      posts:foundPost
+    })
+  })
+})
 
 router.get('/', (req, res)=> {
   // console.log('log+++++++++++++++');
@@ -36,7 +43,7 @@ router.get('/:id', (req, res)=> {
 router.get('/:id/edit', (req, res)=> {
   Post.findById(req.params.id, (err, foundPost)=> {
     res.render('posts/edit.ejs', {
-      post: foundPost
+      posts: foundPost
     });
   });
 });
