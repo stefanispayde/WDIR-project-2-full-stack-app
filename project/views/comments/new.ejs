@@ -22,7 +22,7 @@
       <form action="/comments" method="POST">
         <select name="postId">
           <% for (let i = 0; i < posts.length; i++) { %>
-              <option value="<%=posts[i]._id%>"><%=posts[i].title%></option>
+              <option value="<%=posts[i].id%>"><%=posts[i].title%></option>
         <% } %>
       </select><br/>
 
