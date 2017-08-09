@@ -3,14 +3,16 @@ const app = express();
 const mongoose = require('mongoose');
 
 
-
-const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 
 const postsController = require('./controllers/posts.js');
 app.use('/posts',postsController);
+const commentsController = require('./controllers/comments.js');
+app.use('/comments', commentsController);
 
 
 
