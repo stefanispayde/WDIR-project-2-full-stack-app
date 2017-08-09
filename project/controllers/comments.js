@@ -12,3 +12,14 @@ router.get('/new', (req, res)=> {
     });
   });
 });
+//creating new comment pushesa copy onto posts comments array
+router.post('/', (req, res)=> {
+  Post.findById(req.body.postId, (err, foundPost)=> {
+    Comment.create(req.body, (err, createdComment)=> {
+      foundPost.comments.push(createdComment);
+      foundPost.save((err, data)=> {
+        res.redirect('/comments');
+      });
+    });
+  });
+});
