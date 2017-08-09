@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" c
+    crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <h1>Just The Tip...</h1>
+      <h2>A place to talk/learn about everything sex.</h2>
+    </header>
+
+    <section>
+
+      <form action="/comments" method="POST">
+        <select name="postId">
+          <% for (let i = 0; i < posts.length; i++) { %>
+              <option value="<%=posts[i]._id%>"><&=posts[i],title%></option>
+        <% } %>
+      </select><br/>
+
+      <input type="text" name="title" placeholder="post title" /><br/>
+      <textarea name="entry" placeholder="Enter Comment"></textarea><br/>
+      <input type="sumbit" value="Publish Comment" />
+    </form>
+    </section>
+
+  </body>
+</html>

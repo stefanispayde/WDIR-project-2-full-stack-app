@@ -20,19 +20,20 @@
       </nav>
 
       <section>
-        <h2><%=posts.title%></h2>
-        <h3><%=posts.tag%></h3>
-        <img src="<%=posts.img%>"/>
+        <h3><%=post.tag%></h3>
+        <h3><%=post.title%></h3>
+        <%=post.entry%>
+        <img src="<%=post.img%>"/>
       </section>
 
       <section>
-        <form action="/posts/<%=posts._id%>?_method=DELETE" method="POST">
+        <form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
           <input type="submit" value="Delete Post" />
         </form>
       </section>
 
       <section>
-        <a href="/posts/<%=posts._id%>/edit">Edit Post</a>
+        <a href="/posts/<%=post._id%>/edit">Edit Post</a>
       </section>
 
 

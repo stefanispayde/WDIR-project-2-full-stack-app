@@ -12,7 +12,7 @@
       <h2>A place to talk/learn about everything sex.</h2>
     </header>
 
-    <h2>Edit <%=posts.title%></h2>
+    <h2>Edit <%=post.title%></h2>
 
     <main>
       <nav>
@@ -22,9 +22,10 @@
         </ul>
       </nav>
 
-      <form action="/posts/<%posts._id%>?_method=PUT" method="POST">
-        <input type="text" name="title" value="<%=posts.title%>" placeholder="<%=posts.title%>"/><br/>
-        <input type="text" name="tag" value="<%=posts.tag%>" placeholder="<%=posts.tag%>"/><br/>
+      <form action="/posts/<%=post._id%>?_method=PUT" method="POST">
+        <input type="text" name="title" value="<%=post.title%>" placeholder="<%=post.title%>"/><br/>
+        <input type="text" name="tag" value="<%=post.tag%>" placeholder="<%=post.tag%>"/><br/>
+        <textarea name="<%=post.entry%>" rows="8" cols="80"><%=post.tag%> </textarea>
         <input type="submit" value="Update Post" />
       </form>
 
