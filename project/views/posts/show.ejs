@@ -5,12 +5,17 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
   <body>
-      <header>
-        <h1>Just The Tip...</h1>
-        <h2>A place to talk/learn about everything sex.</h2>
-      </header>
+    <header>
+      <div class='heading1'>
+      <h1>Just The Tip...</h1>
+    </div>
+    <div class="heading2">
+      <h2>A place to talk/learn about everything sex.</h2>
+    </div>
+    </header>
 
       <nav>
         <ul>
@@ -21,9 +26,9 @@
 
       <section>
         <h4><%=post.tag%></h4>
-        <h5><%=posts.title%></h5>
-        <%=posts.entry%>
-        <img src="<%=posts.img%>"/>
+        <h5><%=post.title%></h5>
+        <%=post.entry%>
+        <img src="<%=post.img%>"/>
       </section>
 
       <section>
