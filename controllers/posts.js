@@ -5,9 +5,7 @@ const Comment = require('../models/comments');
 
 // get/read/show all posts
 router.get('/', (req, res)=> {
-  // console.log('log+++++++++++++++');
   Post.find({}, (err, foundPost)=> {
-    // console.log("========")
     console.log(foundPost)
     res.render('posts/index.ejs', {
       posts: foundPost
@@ -49,9 +47,8 @@ router.get('/:id/edit', (req, res)=> {
 
 //updating to id route
 router.put('/:id', (req, res)=> {
-  // console.log("hi");
   Post.findByIdAndUpdate(req.params.id, req.body, (err, foundPost)=> {
-    res.render('/posts')
+    res.redirect('/posts')
   })
 })
 

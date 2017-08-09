@@ -4,7 +4,6 @@ const Comment = require('./comments.js');
 const postSchema = mongoose.Schema({
   tag: String,
   title: String,
-  image: String,
   entry: String,
   comments: [Comment.schema]
 });

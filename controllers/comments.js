@@ -18,7 +18,7 @@ router.get('/new', (req, res)=> {
 });
 
 
-//creating a new article pushes a copy onto anothr posts comment array
+//creating a new article pushes a copy onto another posts comment array
 router.post('/', (req, res)=> {
   Post.findById(req.body.postId, (err, foundPost)=> {
     Comment.create(req.body, (err, createdComment)=> {
