@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
+app.use( express.static( 'public' ) );
 
 const postsController = require('./controllers/posts.js');
 app.use('/posts',postsController);

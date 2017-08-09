@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = require('./comments');
+const Comment = require('./comments.js');
 
 const postSchema = mongoose.Schema({
   tag: String,

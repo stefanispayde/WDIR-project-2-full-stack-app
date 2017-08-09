@@ -1,0 +1,63 @@
+body {
+  background-color: #1E90FF;
+  color: #00008B;
+  margin: 5px 10px;
+}
+
+.heading1 h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+  margin: auto 0;
+
+}
+.heading2 h2{
+  font-family: 'Amatic SC', cursive;
+  font-size: 65px;
+  text-align: center;
+  padding-top: 0;
+}
+.about p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  /*border: 1px solid white;*/
+  /*border-radius: 8px;*/
+  padding: 10px 10px;
+  line-height: 150%;
+  /*text-indent: 25px;*/
+}
+.about-paragraphs {
+  text-indent: 25px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+}
+.disclaimer-border {
+  border: 1px solid white;
+  border-radius: 8px;
+}
+.disclaimer p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 10px 10px;
+  line-height: 150%;
+  text-indent: 25px;
+}
+h3{
+  font-family: 'Amatic SC', cursive;
+  font-size: 45px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+.rules-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.post-link  a{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: #00008B;
+}

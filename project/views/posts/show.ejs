@@ -20,10 +20,10 @@
       </nav>
 
       <section>
-        <h3><%=post.tag%></h3>
-        <h3><%=post.title%></h3>
-        <%=post.entry%>
-        <img src="<%=post.img%>"/>
+        <h4><%=post.tag%></h4>
+        <h5><%=posts.title%></h5>
+        <%=posts.entry%>
+        <img src="<%=posts.img%>"/>
       </section>
 
       <section>
@@ -34,6 +34,15 @@
 
       <section>
         <a href="/posts/<%=post._id%>/edit">Edit Post</a>
+      </section>
+
+      <section>
+        <h3>Comments On This Post:</h3>
+        <ul>
+          <% for(let i = 0; i < post.comments.length; i++) { %>
+          <li><a href='/comments/<%=post.comments[i]._id%>'></a></li>
+        <% } %>
+        </ul>
       </section>
 
 
