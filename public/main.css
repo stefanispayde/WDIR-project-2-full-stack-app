@@ -2,6 +2,7 @@ body {
   background-color: #1E90FF;
   color: #00008B;
   margin: 5px 10px;
+  font-size: 18px;
 }
 
 .heading1 h1{
@@ -20,12 +21,9 @@ body {
 }
 .about p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  /*border: 1px solid white;*/
-  /*border-radius: 8px;*/
+  font-size: 18px;
   padding: 10px 10px;
   line-height: 150%;
-  /*text-indent: 25px;*/
 }
 .about-paragraphs {
   text-indent: 25px;
@@ -40,7 +38,7 @@ body {
 }
 .disclaimer p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   padding: 10px 10px;
   line-height: 150%;
   text-indent: 25px;
@@ -53,9 +51,8 @@ h3{
 }
 .rules-nav {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
-/*.post-link  a{*/
 .btn btn-default {
   font-family: 'Open Sans', sans-serif;
   font-size: 35px;
@@ -66,26 +63,35 @@ h3{
 /******************************
 page 2, post index
 *******************************/
-/*#page2 page2-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  font-weight: 600;
-/*}*/
-/*#page2 page2-h2 {
-  font-family: 'Amatic SC', cursive;
-  font-size: 45px;
-  font-weight: 700;
-}*/
-#page2 a li{
+
+#page2 a li .topic-loop{
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
+  color: #00008B;
+
 }
 #page2 .tag-types {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-.post-edit-nav {
+#page2.post-edit-nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
+}
+#page2 p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin: 10px 1px;
+  padding: 10px 10px;
+}
+h4 h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
+}
+
+#lips  {
+  float: right;
+  margin-bottom: 500px;
 }

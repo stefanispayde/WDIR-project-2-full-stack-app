@@ -27,7 +27,6 @@
       <section>
         <h4><%=post.tag%></h4>
         <h5><%=post.title%></h5>
-        <%=post.entry%>
       </section>
 
       <section>
@@ -41,10 +40,14 @@
       </section>
 
       <section>
+        <a href="/comments/new">Comment On Post</a>
+      </section>
+
+      <section>
         <h3>Comments On This Post:</h3>
         <ul>
           <% for(let i = 0; i < post.comments.length; i++) { %>
-          <li><a href='/comments/<%=post.comments[i]%>'></a></li>
+          <li><a href='/comments/<%=post.comments[i]%>'><%=post.comments[i].entry%></a></li>
         <% } %>
         </ul>
       </section>
