@@ -16,4 +16,25 @@
       <h2>A place to talk/learn about everything sex.</h2>
     </div>
     </header>
-    <h2>Edit: <%=comment.entry%></h2>
+
+    
+
+    <h2>Edit</h2>
+
+    <form action="/comments/<%=comment._id%>?_method=PUT" method="post">
+				<select name="postId">
+                    <% for(let i = 0; i < posts.length; i++) { %>
+                        <option
+							value="<%=posts[i]._id%>"
+							<% if(posts[i]._id.toString() === commentPost._id.toString()){ %>
+								selected
+							<% } %>
+							>
+							<%=posts[i].title%>
+						</option>
+                    <% } %>
+                </select><br/>
+				<input type="text" name="title" value='<%=posts[i].title%>'<br/>
+				<textarea name="entry"><%=comment.entry%></textarea><br/>
+				<input type="submit" value="Update comment"/>
+			</form>

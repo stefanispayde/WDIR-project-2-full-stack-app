@@ -30,7 +30,7 @@ router.post('/', (req, res)=> {
   });
 });
 
-//read/showing post with link on comment show page
+//read/showing post with link to comment show page
 router.get('/:id', (req, res)=> {
   Comment.findById(req.params.id, (err, foundComment)=> {
     Post.findOne({'comments._id':req.params.id}, (err, foundPost)=> {

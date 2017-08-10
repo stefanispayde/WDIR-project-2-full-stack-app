@@ -21,22 +21,20 @@
 
       <a href="/posts/<%=/posts/_id%>"><%=post.title%></a>
 
-        <nav>
-  				<ul>
-  					<li>
-  						<a href="/">Home</a>
-  					</li>
-  					<li>
-  						<a href="/comments">Comments Index</a>
-  					</li>
-  				</ul>
-  			</nav>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/comments/">Comments</a></li>
+      </ul>
 
     </section>
-
+<%# //want to put this in a  text field%>
       <section>
         <%=comment.entry%>
       </section>
+
+      <%# <a class="btn btn-default" href="/comments/" role="button">Edit Comment</a>
+      <button class="btn btn-default" type="submit">Button</button>%>
+
 
       <section>
         <form action="/comments/<%=comment._id%>?_method=DELETE" method="post">

@@ -19,12 +19,10 @@
       </div>
     </header>
 
-      <nav>
-        <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/posts">BACK TO POSTS</a></li>
-        </ul>
-      </nav>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/">Home</a></li>
+      <li role="presentation" class="active"><a href="/posts/">Posts</a></li>
+    </ul>
 
       <section>
         <h4><%=post.tag%></h4>
@@ -46,7 +44,7 @@
         <h3>Comments On This Post:</h3>
         <ul>
           <% for(let i = 0; i < post.comments.length; i++) { %>
-          <li><a href='/comments/<%=post.comments[i]._id%>'></a></li>
+          <li><a href='/comments/<%=post.comments[i]%>'></a></li>
         <% } %>
         </ul>
       </section>
