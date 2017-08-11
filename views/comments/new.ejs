@@ -7,20 +7,22 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
+
   <body>
     <header>
       <div class='heading1'>
-      <h1>Just The Tip...</h1>
-    </div>
-    <div class="heading2">
-      <h2>A place to talk/learn about everything sex.</h2>
-    </div>
+        <h1>Just The Tip...</h1>
+      </div>
+
+      <div class="heading2">
+        <h2>A place to talk/learn about everything sex.</h2>
+      </div>
     </header>
 
     <ul class="nav nav-tabs">
       <li role="presentation" class="active"><a href="/">Home</a></li>
       <li role="presentation" class="active"><a href="/posts/new">Submit A Post</a></li>
-    </ul>
+    </ul><br/><br/>
 
     <section>
 
@@ -29,9 +31,9 @@
           <% for (let i = 0; i < posts.length; i++) { %>
               <option value="<%=posts[i].id%>"><%=posts[i].title%></option>
         <% } %>
-      </select><br/>
+      </select><br/><br/>
 
-      <input type="text" name="title" placeholder="post title" /><br/>
+      <input type="text" name="title" placeholder="comment title" /><br/>
       <textarea name="entry" placeholder="Enter Comment"></textarea><br/>
       <input type="submit" value="Publish Comment"/>
     </form>

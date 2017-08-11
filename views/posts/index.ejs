@@ -36,29 +36,25 @@
           <h3>Topic Tag</h3>
 
           <div class='topic-nav'>
-            <nav>
-              <ul>
-                <li>I have a question...</li>
-                <li>Things that worked!</li>
-                <li>Things that didn't</li>
-                <li>You want me to put what where?!</li>
+            <nav class="topic">
+              <ul class='topic'>
+                <li class="topic">I have a question...</li>
+                <li class="topic">Things that worked!</li>
+                <li class="topic">Things that didn't</li>
+                <li class="topic">You want me to put what where?!</li>
               </ul>
             </nav>
           </div>
 
 
             <h3>Previous posts</h3>
-              <ul>
+              <ul class='topic-loop'>
                 <% for (let i = 0; i < posts.length; i++) { %>
-                <li>
-                  <div class='topic-loop'>
-                    <a href="/posts/<%=posts[i]._id%>"> <%=posts[i].tag%></a>
-                  </div>
+                <li class='topic-loop'>
+                    <a class='topic-loop' href="/posts/<%=posts[i]._id%>"> <%=posts[i].tag%></a>
                 </li>
                 <% } %>
               </ul>
-              <img id="lips" xxde4src="http://pngimg.com/uploads/lips/lips_PNG6228.png?i=1" alt="lips" />
-
-          </body>
-        </div>
+      </body>
+    </div>
 </html>

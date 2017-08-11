@@ -5,6 +5,14 @@ body {
   font-size: 15px;
 }
 
+  input, textarea, select, button {
+  width : 150px;
+  margin: 0;
+  font-size: 100%;
+  }
+
+
+
 .heading1 h1{
   font-family: 'Amatic SC', cursive;
   font-size: 90px;
@@ -43,7 +51,7 @@ body {
   line-height: 150%;
   text-indent: 25px;
 }
-h3{
+h3 {
   font-family: 'Amatic SC', cursive;
   font-size: 45px;
   font-weight: 700;
@@ -63,18 +71,21 @@ h3{
 /******************************
 page 2, post index
 *******************************/
-
-#page2 a li .topic-loop{
+.topic-nav, .topic-loop {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
-
+}
+#page2, a ,li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
 }
 #page2 .tag-types {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-#page2.post-edit-nav {
+#page2 .post-edit-nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
@@ -85,7 +96,7 @@ page 2, post index
   margin: 10px 1px;
   padding: 10px 10px;
 }
-h4 h5 {
+h4, h5 {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
@@ -93,5 +104,20 @@ h4 h5 {
 
 #lips  {
   float: right;
-  margin-bottom: 500px;
+}
+.edit-post{
+color: #00008b;
+font-size: 16px;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+.comment-post {
+  float right;
+}
+.new-post-form {
+  margin: auto 0;
+  padding: 10px;
+  /*color: #00008B;
+  font-size: 14px;*/
 }

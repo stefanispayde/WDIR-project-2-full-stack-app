@@ -7,33 +7,35 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
+
   <body>
     <header>
       <div class='heading1'>
-      <h1>Just The Tip...</h1>
-    </div>
-    <div class="heading2">
-      <h2>A place to talk/learn about everything sex.</h2>
-    </div>
-    </header>
+        <h1>Just The Tip...</h1>
+      </div>
 
-    <h2>Edit:</h2>
-    <a href="/posts/_id"><%=post.title%></a>
+      <div class="heading2">
+        <h2>A place to talk/learn about everything sex.</h2>
+      </div>
+      </header>
 
-    <main>
-      <div class="post-edit-nav">
-      <nav>
-        <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/posts">POST's INDEX</a></li>
-        </ul>
-      </nav>
-    </div>
+      <h2>Edit:</h2>
+      <a href="/posts/_id"><%=post.title%></a>
+
+      <main>
+        <div class="post-edit-nav">
+          <nav>
+            <ul>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/posts">POST's INDEX</a></li>
+            </ul>
+          </nav>
+      </div>
 
       <form action="/posts/<%=post._id%>?_method=PUT" method="POST">
         <input type="text" name="title" value="<%=post.title%>" placeholder="<%=post.title%>"/><br/>
         <input type="text" name="tag" value="<%=post.tag%>" placeholder="<%=post.tag%>"/><br/>
-        <textarea name="<%=post.entry%>" rows="8" cols="80"><%=post.tag%> </textarea>
+        <textarea name="<%=post.entry%>" rows="8" cols="80"><%=post.entry%> </textarea>
         <input type="submit" value="Update Post" />
       </form>
 
