@@ -24,7 +24,7 @@ router.post('/', (req, res)=> {
     Comment.create(req.body, (err, createdComment)=> {
       foundPost.comments.push(createdComment);
       foundPost.save((err, data)=> {
-        res.redirect('/posts');   //changed route, initially redirected back to comments/new, want to redirect back to that posts show page which is brokem
+        res.redirect('/posts');  
       });
     });
   });

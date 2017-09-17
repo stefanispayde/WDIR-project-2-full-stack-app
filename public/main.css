@@ -1,25 +1,18 @@
-body {
+ body {
   background-color: #1E90FF;
   color: #00008B;
   margin: 5px 10px;
-  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;*/
 }
-
-  input, textarea, select, button {
-  width : 150px;
-  margin: 0;
-  font-size: 100%;
-  }
-
-
-
+/*************************
+all pages
+*************************/
 .heading1 h1{
   font-family: 'Amatic SC', cursive;
   font-size: 90px;
   font-weight: 700;
   text-align: center;
   margin: auto 0;
-
 }
 .heading2 h2{
   font-family: 'Amatic SC', cursive;
@@ -27,97 +20,164 @@ body {
   text-align: center;
   padding-top: 0;
 }
-.about p {
+.nav-tabs li a {
+  margin-left: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
+  text-align: center;
+}
+/**************************
+page 1 index.html
+**************************/
+
+#page1 .about p {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   padding: 10px 10px;
   line-height: 150%;
 }
-.about-paragraphs {
+#page1 .about-paragraphs {
   text-indent: 25px;
   border: 1px solid white;
   border-radius: 8px;
   margin-bottom: 10px;
-
 }
-.disclaimer-border {
+#page1 .disclaimer-border {
   border: 1px solid white;
   border-radius: 8px;
 }
-.disclaimer p {
+#page1 .disclaimer p {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   padding: 10px 10px;
   line-height: 150%;
   text-indent: 25px;
 }
+#page1 .disclaimer h3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 55px;
+  font-weight: 700;
+  /*margin-left: 15px;*/
+  text-align: center;
+}
+#page1 .rules-nav li{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-align: left;
+}
+/*******************************
+page 2 post index
+*******************************/
+.topic-loop {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
+}
 h3 {
   font-family: 'Amatic SC', cursive;
-  font-size: 45px;
+  font-size: 55px;
   font-weight: 700;
-  margin-left: 15px;
+  text-align: center;
 }
-.rules-nav {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-}
-.btn btn-default {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  text-decoration: none;
-  color: #00008B;
-}
+/*******************************
+page 3, post show
+********************************/
 
 /******************************
-page 2, post index
+page 4, post new
 *******************************/
-.topic-nav, .topic-loop {
+.table-bordered th {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
 }
-#page2, a ,li {
+.table-bordered {
+  width: 30%;
+}
+td {
+  height: 50px;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #00008B;
 }
-#page2 .tag-types {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-}
-#page2 .post-edit-nav {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  color: #00008B;
-}
-#page2 p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  margin: 10px 1px;
-  padding: 10px 10px;
-}
-h4, h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  color: #00008B;
-}
+.table-bordered td {
+  margin: auto 0;
 
-#lips  {
-  float: right;
 }
-.edit-post{
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*a ,li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
+  text-align: center;
+}*/
+.tag-types {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+.tag-types p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  text-indent: 25px;
+  margin: 10px 10px;
+}
+/*.edit-post{
 color: #00008b;
 font-size: 16px;
 font-family: 'Open Sans', sans-serif;
-
 }
 
 .comment-post {
   float right;
+}*/
+.new-post-form, h3{
+  /*float: right;*/
+  margin-top: -75px;
+  margin-right: 5px;
 }
-.new-post-form {
+.new-post-form input{
   margin: auto 0;
   padding: 10px;
-  /*color: #00008B;
-  font-size: 14px;*/
+  color: #00008B;
+  font-size: 14px;
+  height: 100%;
+  width: 20%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+.new-post-form .submit {
+  width: 20%;
+}
+.new-post-form textarea {
+  width: 20%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+.topic-loop li{
+  text-align: center;
+  list-style: none;
+}
+h3 {
+  font-size: 75px;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  margin-top: 0;
+}
+/********************************/
+/*page3
+**********************************/
+#page4 h3 {
+  font-size: 75px;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+}
+**********************************
+#page5 .post-edit-nav {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #00008B;
 }

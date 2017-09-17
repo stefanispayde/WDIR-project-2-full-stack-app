@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
+  </head>
 
-  <body>
+  <body id="page4">
     <header>
       <div class='heading1'>
         <h1>Just The Tip...</h1>
@@ -26,13 +27,52 @@
 
     <main>
 
-          <h3>Write Away!</h3>
+      <section class="tag-types">
+        <p>This forum can be used to not only ask questions and learn a thing or two, but to share stories
+           of the successful and the not so successful. Gloat a little. It's ok, just as long as good thorough instructions follow!
+           Have an experience that just went south real fast? Let us know so we don't go down the same road. In order to give readers
+           a head's up on your topic, include one of these tags in your post. Just copy and paste into the tag line so we can organize where
+           your story will live.</p><br/>
+      </section>
 
+          <div class='container'>
+            <div class="table-responsive">
+              <div class="clearfix">
+
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>TOPIC TAGS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I have a question...</td>
+                </tr>
+                <tr>
+                  <td>Things that worked!</td>
+                </tr>
+                <tr>
+                  <td>Things that didn't.</td>
+                </tr>
+                <tr>
+                  <td>You want me to put what where?!</td>
+                </tr>
+                <tr>
+                  <td>Biology101</td>
+                </tr>
+              </tbody>
+            </thead>
+          </table>
+        </div>
+      </div>
+</div>
+          <h3>Write Away!</h3>
           <form class='new-post-form' action="/posts" method="POST">
 				        <input type="text" name="tag" placeholder="topic tag"/><br/><br/>
                 <input type="text" name="title" placeholder="title"/><br/><br/>
-                <textarea name="entry" rows="8" cols="80"></textarea><br/>
-                <input type="submit" value="Submit Post"/>
+                <textarea name="entry" rows="8" cols="80" placeholder="type here"></textarea><br/>
+                <input class="submit" type="submit" value="Submit Post"/>
 			    </form>
     </main>
   </body>
