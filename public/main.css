@@ -83,10 +83,15 @@ h3 {
 /*******************************
 page 3, post show
 ********************************/
-
+h3
 /******************************
 page 4, post new
 *******************************/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 .table-bordered th {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
@@ -101,13 +106,8 @@ td {
   font-size: 20px;
 }
 .table-bordered td {
-  margin: auto 0;
-
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  margin: 0 auto;
+  align-self: center;
 }
 /*a ,li {
   font-family: 'Open Sans', sans-serif;

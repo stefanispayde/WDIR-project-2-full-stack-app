@@ -25,8 +25,8 @@
     </ul>
 
       <section>
-        <h4>Tag: <%=post.tag%></h4>
-        <h4>Title: <%=post.title%></h4>
+        <h3>Tag: <%=post.tag%></h3>
+        <h3>Title: <%=post.title%></h3>
       </section>
 
       <section>
@@ -44,7 +44,7 @@
       </section>
 
       <section>
-        <h3>Comments On This Post:</h3>
+        <h4>Comments On This Post:</h4>
           <ul>
             <% for(let i = 0; i < post.comments.length; i++) { %>
             <li><a href='/comments/<%=post.comments[i]%>'><%=post.comments[i].entry%></a></li>
