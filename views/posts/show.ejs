@@ -24,35 +24,36 @@
       <li role="presentation" class="active"><a href="/posts/">Posts</a></li>
     </ul>
 
-      <section>
-        <h3>Tag: <%=post.tag%></h3>
+      <section class="tag-title">
+        <h4>Tag: <%=post.tag%></h4>
         <h4>Title: <%=post.title%></h4>
       </section>
 
+      <hr>
+
+
       <section>
-        <form action="/posts/<%=post._id%>?_method=DELETE" method="POST">
-          <input type="submit" value="Delete Post" />
+        <a class="edit-show" href="/posts/<%=post._id%>/edit">Edit Post</a>
+      </section>
+
+      <section>
+        <a class="edit-show" href="/comments/new">Comment On Post</a>
+      </section>
+
+      <section>
+        <form class="delete-form" action="/posts/<%=post._id%>?_method=DELETE" method="POST">
+          <input class="submit" style="color:#00008B"type="submit" value="Delete Post" />
         </form>
       </section>
 
-      <section class="edit-post">
-        <a href="/posts/<%=post._id%>/edit">Edit Post</a>
-      </section>
-
       <section>
-        <a href="/comments/new">Comment On Post</a>
-      </section>
-
-      <section>
-        <h5>Comments On This Post:</h5>
+        <h5 id="post-comments">Comments On This Post:</h5>
           <ul>
             <% for(let i = 0; i < post.comments.length; i++) { %>
             <li><a href='/comments/<%=post.comments[i]%>'><%=post.comments[i].entry%></a></li>
           <% } %>
           </ul>
       </section>
-
-
 
   </body>
 </html>

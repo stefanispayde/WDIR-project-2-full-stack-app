@@ -80,10 +80,6 @@ page 2 post index
   font-weight: 700;
   text-align: center;
 }
-/*******************************
-page 3, post show
-********************************/
-
 /******************************
 page 4, post new
 *******************************/
@@ -171,7 +167,6 @@ td {
   font-size: 70px;
   font-family: 'Amatic SC', cursive;
   text-align: center;
-  /*margin: -50px auto;*/
   position: absolute;
     top: 50%;
     left: 50%;
@@ -180,15 +175,46 @@ td {
 }
 
 /********************************/
-/*page5
+/*page5 post show page
 **********************************/
 #page5 .post-edit-nav {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   color: #00008B;
 }
-#page5 h3, h4, h5 {
-  font-size: 20px;
-  font-family: 'Amatic SC', cursive;
+#page5 #tag-title h3, h4 {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00008B;
   text-align: left;
+  margin-left: 25px;
+  /*margin-top: 25px;*/
+}
+.edit-show {
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00008B;
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+#post-comments {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+hr {
+  border-top: 1px double white;
+  width: 250px;
+  margin-left: 0;
+  margin-top: 3px;
+  margin-left: 25px;
+}
+.delete-form .submit  {
+  width: 6%;
+  color: #00008B;
+  margin-left: 25px;
+  margin-top:  25px;
 }
