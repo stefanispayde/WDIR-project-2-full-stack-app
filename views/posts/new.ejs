@@ -37,8 +37,6 @@
 
           <div class='container'>
             <div class="table-responsive">
-              <div class="clearfix">
-
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -67,6 +65,7 @@
         </div>
       </div>
 </div>
+          <%# <div class='post_title'>%>
           <h3>Write Away!</h3>
           <form class='new-post-form' action="/posts" method="POST">
 				        <input type="text" name="tag" placeholder="topic tag"/><br/><br/>
@@ -74,6 +73,7 @@
                 <textarea name="entry" rows="8" cols="80" placeholder="type here"></textarea><br/>
                 <input class="submit" type="submit" value="Submit Post"/>
 			    </form>
+        <%# </div>%>
     </main>
   </body>
 </html>
