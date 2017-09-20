@@ -21,15 +21,15 @@
 
     <section>
 
-      <a href="/posts/<%=/posts/_id%>"><%=post.title%></a>
-
       <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="/">Home</a></li>
         <li role="presentation"><a href="/comments/">Comments</a></li>
       </ul>
 
     </section>
-<%# //want to put this in a  text field%>
+
+    <a href="/posts/<%=/posts/_id%>"><%=post.title%></a>
+
       <section>
         <%=comment.entry%>
       </section>
@@ -43,5 +43,5 @@
       <section>
         <a href="/comments/<%=comment._id%>/edit">Edit</a>
       </section>
-  <body>
+  </body>
 </html>

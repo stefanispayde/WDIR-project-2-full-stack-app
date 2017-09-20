@@ -18,13 +18,26 @@ router.get('/new', (req, res)=> {
 });
 
 
-//creating a new article pushes a copy onto another posts comment array
+//creating a new comment pushes a copy onto another posts comment array
 router.post('/', (req, res)=> {
   Post.findById(req.body.postId, (err, foundPost)=> {
     Comment.create(req.body, (err, createdComment)=> {
       foundPost.comments.push(createdComment);
       foundPost.save((err, data)=> {
-        res.redirect('/posts');  
+        res.redirect('/posts');
+      });
+    });
+  });
+});
+
+
+// Deleting a comment updates a post's comment list
+router.delete('/:id', (req, res)=> {
+  Comment.findByIdAndRemove(req.params.id, (err, foundComment)=> {
+    Post.findOne({'comments._id':req.params.id}, (err, foundPost)=> {
+      foundPost.comments.id(req.params.id).remove();
+      foundPost.save((err, data)=> {
+        res.redirect('/comments');
       });
     });
   });
@@ -38,9 +51,8 @@ router.get('/:id', (req, res)=> {
         post:foundPost,
         comment:foundComment
       });
-    });
+    })
   });
 });
-
 
 module.exports = router;

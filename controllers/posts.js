@@ -50,14 +50,8 @@ router.put('/:id', (req, res)=> {
   Post.findByIdAndUpdate(req.params.id, req.body, (err, foundPost)=> {
     res.redirect('/posts')
   })
-})
-
-
-//deleting post on edit page and redirecting to index
-router.delete('/:id', (req, res)=> {
-  Post.findByIdAndRemove(req.params.id, ()=> {
-    res.redirect('/posts');
-  });
 });
+
+
 
 module.exports = router;
