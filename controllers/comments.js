@@ -14,7 +14,7 @@ router.get('/new', (req, res)=> {
     res.render('comments/new.ejs', {
       posts: allPosts
     });
-  });
+  })
 });
 
 

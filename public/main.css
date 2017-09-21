@@ -162,6 +162,7 @@ td {
 .topic-loop li{
   text-align: center;
   list-style: none;
+  margin-top: 5px;
 }
 #write-away {
   font-size: 70px;
@@ -182,13 +183,20 @@ td {
   font-size: 20px;
   color: #00008B;
 }
-#page3 #tag-title h3, h4, p {
+#page3 .tag-title h3, h4 {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   color: #00008B;
   text-align: left;
   margin-left: 25px;
   /*margin-top: 25px;*/
+}
+.headings {
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00008B;
+  text-align: left;
+  margin-left: 30px;
 }
 .edit-show {
   font-size: 22px;
@@ -207,7 +215,7 @@ td {
 }
 hr {
   border-top: 1px double white;
-  width: 250px;
+  width: 400px;
   margin-left: 0;
   margin-top: 3px;
   margin-left: 25px;
@@ -226,5 +234,46 @@ hr {
   margin-left: 10px;
 }
 /********************************/
-/*page5 post show page
+/*page5 post edit page
 **********************************/
+#page5 #edit {
+  font-size: 45px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00008B;
+  text-align: center;
+}
+.new-post-form-edit {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #00008B;
+  margin-top: 0;
+  margin-left: 600px;*/
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    /*margin: 0 auto;*/
+    /*margin-left: -300px;*/
+}
+.new-post-form-edit input{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: #00008B;
+  padding: 10px;
+  height: 100%;
+  width: 40%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+  }
+.new-post-form-edit .submit {
+  width: 40%;
+  display: block;
+  vertical-align: middle;
+}
+.new-post-form-edit textarea {
+  width: 40%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #00008B;
+}
