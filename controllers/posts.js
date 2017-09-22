@@ -36,9 +36,23 @@ router.get('/:id', (req, res)=> {
 });
 
 router.delete('/:id', (req, res)=> {
-  Post.findByIdAndRemove(req.params.id, ()=> {
-    res.redirect('/posts');
-  });
+  Post.findByIdAndRemove(req.params.id, (err, foundPost)=> {
+    const commentIds = [];
+    for (let i = 0; i < foundPost.comments.length; i++) {
+      commentIds.push(foundPost.comments[i]._id);
+    }
+    Comment.remove(
+            {
+                  _id : {
+                        $in: commentIds
+              }
+    },
+    (err, data)=>{
+        res.redirect('/posts');
+      }
+    );
+});
+
 });
 
 // reading/showing/getting edit post view
