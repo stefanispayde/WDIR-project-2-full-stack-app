@@ -57,8 +57,5 @@ router.put('/:id', (req, res)=> {
   });
 });
 
-//route to delete post and its comments
-
-
 
 module.exports = router;

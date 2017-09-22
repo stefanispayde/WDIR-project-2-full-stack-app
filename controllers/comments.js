@@ -3,11 +3,6 @@ const router = express.Router();
 const Post = require('../models/posts.js');
 const Comment = require('../models/comments.js');
 
-
-router.get('/', (req, res)=>{
-	res.render('comments/index.ejs');
-});
-
 // reading/showing/getting all posts on new comments page
 router.get('/new', (req, res)=> {
   Post.find({}, (err, allPosts)=> {
@@ -15,6 +10,24 @@ router.get('/new', (req, res)=> {
       posts: allPosts
     });
   })
+});
+
+
+router.get('/', (req, res)=>{
+	res.render('comments/index.ejs');
+});
+
+
+//read/showing post with link to comment show page
+router.get('/:id', (req, res)=> {
+  Comment.findById(req.params.id, (err, foundComment)=> {
+    Post.findOne({'comments._id':req.params.id}, (err, foundPost)=> {
+      res.render('comments/show.ejs', {
+        post:foundPost,
+        comment:foundComment
+      });
+    })
+  });
 });
 
 
@@ -43,16 +56,6 @@ router.delete('/:id', (req, res)=> {
   });
 });
 
-//read/showing post with link to comment show page
-router.get('/:id', (req, res)=> {
-  Comment.findById(req.params.id, (err, foundComment)=> {
-    Post.findOne({'comments._id':req.params.id}, (err, foundPost)=> {
-      res.render('comments/show.ejs', {
-        post:foundPost,
-        comment:foundComment
-      });
-    })
-  });
-});
+
 
 module.exports = router;

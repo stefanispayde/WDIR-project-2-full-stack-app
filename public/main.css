@@ -185,6 +185,7 @@ td {
 }
 #page3 .tag-title h3, h4 {
   font-size: 24px;
+  font-weight: 700;
   font-family: 'Open Sans', sans-serif;
   color: #00008B;
   text-align: left;
@@ -198,14 +199,19 @@ td {
   text-align: left;
   margin-left: 30px;
 }
-.edit-show {
+
+.edit-show  {
   font-size: 22px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   color: #00008B;
   text-align: left;
   margin-left: 25px;
   margin-top: 25px;
 }
+/*.edit-show {
+  color: white;
+}*/
 #post-comments {
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;

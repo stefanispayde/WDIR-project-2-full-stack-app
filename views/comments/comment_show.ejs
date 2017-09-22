@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
     <link rel="stylesheet" href="/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">
+  </head>
 
-  <body>
+  <body id="page6">
     <header>
       <div class='heading1'>
         <h1>Just The Tip...</h1>
@@ -21,19 +22,13 @@
 
     <ul class="nav nav-tabs">
       <li role="presentation" class="active"><a href="/">Home</a></li>
-      <li role="presentation" class="active"><a href="/comments/new">Submit A New Comment</a></li>
+      <li role="presentation" class="active"><a href="/posts/">Posts</a></li>
     </ul>
 
-      <h1>Edit/Delete Comments</h1>
+    <h2><%=comment.title%></h2></br>
 
-      <h3>Comments</h3>
-        <ul class='topic-loop'>
-          <% for (let i = 0; i < comments.length; i++) { %>
-          <li class='topic-loop'>
-              <a class='topic-loop' href="/comments/<%=comments[i]._id%>"> <%=comments[i].entry%></a>
-          </li>
-          <% } %>
-        </ul>
+    <section>
+      <%=comment.entry%>
+    </section>
 
-  </body>
-</html>
+    <a href="/posts/<%=/posts/_id%>"><%=post.title%></a>

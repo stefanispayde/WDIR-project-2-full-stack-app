@@ -17,9 +17,12 @@
     </div>
     </header>
 
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/">Home</a></li>
+      <li role="presentation" class="active"><a href="/posts/">Posts</a></li>
+    </ul>
 
-
-    <h2>Edit</h2>
+    <h2>Edit <%=comment.title%>'s info</h2>
 
     <form action="/comments/<%=comment._id%>?_method=PUT" method="post">
 				<select name="postId">
@@ -34,9 +37,9 @@
 						</option>
                     <% } %>
                 </select><br/>
-				<input type="text" name="title" value='<%=posts[i].title%>'<br/>
+				<input type="text" name="title" value='<%=comment.title%>'<br/>
 				<textarea name="entry"><%=comment.entry%></textarea><br/>
-				<input type="submit" value="Update comment"/>
+				<input type="submit" value="Update Comment"/>
 			</form>
     </body>
 </html>
