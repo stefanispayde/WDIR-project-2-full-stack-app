@@ -56,6 +56,19 @@ router.delete('/:id', (req, res)=> {
   });
 });
 
+//updating a comment updates posts comment page
+router.put('/:id', (req, res)=> {
+	Comment.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPost)=> {
+		Post.findOne({'comments._id' : req.params.id }, (err, foundPost)=> {
+			foundPost.comments.id(req.params.id).remove();
+			foundPost.commments.push(updatedComment);
+			foundPost.save((err, data)=>{
+				res.redirect('/comments/'+req.params.id);
+			});
+		});
+	});
+});
+
 
 
 module.exports = router;
