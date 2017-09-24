@@ -232,12 +232,20 @@ hr {
   margin-left: 25px;
   margin-top:  25px;
 }
-.comment-link  {
+.comment-title  {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   color: #00008B;
   text-align: left;
   margin-left: 10px;
+}
+.comment-link {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #00008B;
+  text-align: left;
+  margin-left: 10px;
+  padding-bottom: 3px;
 }
 /********************************/
 /*page5 post edit page

@@ -14,7 +14,7 @@ router.get('/new', (req, res)=> {
 
 
 router.get('/', (req, res)=>{
-	res.render('comments/index.ejs');
+	res.render('/comments/index'); //changed from render comments/index
 });
 
 
@@ -22,7 +22,7 @@ router.get('/', (req, res)=>{
 router.get('/:id', (req, res)=> {
   Comment.findById(req.params.id, (err, foundComment)=> {
     Post.findOne({'comments._id':req.params.id}, (err, foundPost)=> {
-      res.render('comments/show.ejs', {
+      res.render('comments/comment_show.ejs', {
         post:foundPost,
         comment:foundComment
       });

@@ -31,4 +31,14 @@
       <%=comment.entry%>
     </section>
 
-    <a href="/posts/<%=/posts/._id%>"><%=post.title%></a>
+    
+
+    <section>
+      <form action="/comments/<%=comment._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete Comment"/>
+      </form>
+    </section>
+
+    <section>
+      <a href="/comments/<%=comment._id%>/edit">Edit</a>
+    </section>

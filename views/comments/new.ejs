@@ -24,6 +24,14 @@
       <li role="presentation" class="active"><a href="/posts/new">Submit A Post</a></li>
     </ul><br/><br/>
 
+    <main>
+      <section class="tag-types">
+        <p>If you have an opinion on this post, can relate to it, or learned something from it, say so here for everyone to
+          benefit! Find the title of your comment in the st dropdown menu so it is submitted to the correct post and gice it a title
+          for others to shift through and navigate. Please remember the rules and help continue to make this a place where everyone feels
+          comfortable.</p><br/>
+      </section>
+
     <section>
 
       <form action="/comments" method="POST">
@@ -31,6 +39,7 @@
           <% for (let i = 0; i < posts.length; i++) { %>
               <option value="<%=posts[i].id%>"><%=posts[i].title%></option>
         <% } %>
+
       </select><br/><br/>
 
       <input type="text" name="title" placeholder="comment title" /><br/>

@@ -57,8 +57,8 @@
         <h5 id="post-comments">Comments On This Post:</h5>
           <ol>
             <% for(let i = 0; i < post.comments.length; i++) { %>
-            <li><a class="comment-link" href="/comments/<%=post.comments[i]._id%>"><%=post.comments[i].title%></a></li></br>
-            <a href="/comments/<%=post.comments[i]._id%>"><%=post.comments[i].entry%></a>
+            <li><a class="comment-link" href="/comments/<%=post.comments[i]._id%>"><%=post.comments[i].title%></a></li>
+            <a href="/comments/<%=post.comments[i]._id%>"><%=post.comments[i].entry%></a></li>
           <% } %>
         </ol>
       </section>
