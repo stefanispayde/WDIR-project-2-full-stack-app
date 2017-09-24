@@ -126,14 +126,14 @@ td {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   text-indent: 25px;
-  margin: 10px 10px;
+  margin: 10px 20px;
+  text-align: left;
+
 }
 .new-post-form {
   font-family: 'Open Sans', sans-serif;
   font-size: 25px;
   color: #00008B;
-  /*margin-top: 0;
-  margin-left: 600px;*/
   position: absolute;
     top: 50%;
     left: 50%;
@@ -158,6 +158,11 @@ td {
   font-family: 'Open Sans', sans-serif;
   /*font-size: px;*/
   color: #00008B;
+}
+.new-post-form2 {
+  margin-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
 }
 .topic-loop li{
   text-align: center;
@@ -209,9 +214,6 @@ td {
   margin-left: 25px;
   margin-top: 25px;
 }
-/*.edit-show {
-  color: white;
-}*/
 #post-comments {
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
@@ -290,4 +292,13 @@ hr {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: #00008B;
+}
+/*************************
+page7 comments index page
+*************************/
+#page7 h3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
 }

@@ -24,17 +24,16 @@
       <li role="presentation" class="active"><a href="/posts/new">Submit A Post</a></li>
     </ul><br/><br/>
 
-    <main>
       <section class="tag-types">
         <p>If you have an opinion on this post, can relate to it, or learned something from it, say so here for everyone to
-          benefit! Find the title of your comment in the st dropdown menu so it is submitted to the correct post and gice it a title
-          for others to shift through and navigate. Please remember the rules and help continue to make this a place where everyone feels
-          comfortable.</p><br/>
+          benefit! Find the title of your comment in the 1st dropdown menu so it is submitted to the correct post, and give it a title.
+          This will help each individual comment stand apart from each other. Please remember the rules and help continue to make this a place where everyone feels
+          comfortable!!!</p><br/>
       </section>
 
     <section>
 
-      <form action="/comments" method="POST">
+      <form class='new-post-form2' action="/comments" method="POST">
         <select name="postId">
           <% for (let i = 0; i < posts.length; i++) { %>
               <option value="<%=posts[i].id%>"><%=posts[i].title%></option>
@@ -43,9 +42,9 @@
       </select><br/><br/>
 
       <input type="text" name="title" placeholder="comment title" /><br/>
-      <textarea name="entry" placeholder="Enter Comment"></textarea><br/>
-      <input type="submit" value="Publish Comment"/>
-    </form>
+      <textarea name="entry" rows="8" cols="80" placeholder="Enter Comment"></textarea><br/>
+      <input class="submit" type="submit" value="Publish Comment"/>
+      </form>
     </section>
 
   </body>

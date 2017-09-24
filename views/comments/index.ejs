@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/main.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700|Open+Sans:400,700,800" rel="stylesheet">  </head>
 
-  <body>
+  <body id="page7">
     <header>
       <div class='heading1'>
         <h1>Just The Tip...</h1>
@@ -24,9 +24,11 @@
       <li role="presentation" class="active"><a href="/comments/new">Submit A New Comment</a></li>
     </ul>
 
-      <h1>Edit/Delete Comments</h1>
+    <main>
 
-      <h3>Comments</h3>
+      <h3>Edit/Delete Comments</h3>
+
+      
         <ul class='topic-loop'>
           <% for (let i = 0; i < comments.length; i++) { %>
           <li class='topic-loop'>
@@ -34,6 +36,8 @@
           </li>
           <% } %>
         </ul>
+
+    </main>
 
   </body>
 </html>

@@ -12,9 +12,17 @@ router.get('/new', (req, res)=> {
   })
 });
 
+router.get('/', (req, res)=> {
+	Comment.find({}, (err, foundComments)=> {
+		res.render('comments/index.ejs', {
+			comments: foundComments
+		});
+	})
+});
+
 
 router.get('/', (req, res)=>{
-	res.render('/comments/index'); //changed from render comments/index
+	res.render('comments/index.ejs');
 });
 
 
@@ -61,7 +69,7 @@ router.put('/:id', (req, res)=> {
 	Comment.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPost)=> {
 		Post.findOne({'comments._id' : req.params.id }, (err, foundPost)=> {
 			foundPost.comments.id(req.params.id).remove();
-			foundPost.commments.push(updatedComment);
+			foundPost.comments.push(updatedComment);
 			foundPost.save((err, data)=>{
 				res.redirect('/comments/'+req.params.id);
 			});

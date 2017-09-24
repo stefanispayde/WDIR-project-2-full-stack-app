@@ -31,7 +31,7 @@
       <%=comment.entry%>
     </section>
 
-    
+
 
     <section>
       <form action="/comments/<%=comment._id%>?_method=DELETE" method="post">
@@ -40,5 +40,5 @@
     </section>
 
     <section>
-      <a href="/comments/<%=comment._id%>/edit">Edit</a>
+      <a class="edit-show" href="/comments/<%=comment._id%>/edit">Edit</a>
     </section>
