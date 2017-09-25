@@ -24,14 +24,15 @@
           <li role="presentation" class="active"><a href="/">Home</a></li>
           <li role="presentation" class="active"><a href="/posts/new">Create New Post</a></li>
         </ul>
-        
+
             <h3>Previous posts</h3>
-              <ul class='topic-loop'>
-                <% for (let i = 0; i < posts.length; i++) { %>
-                <li class='topic-loop'>
-                    <a class='topic-loop' href="/posts/<%=posts[i]._id%>"> <%=posts[i].tag%></a>
-                </li>
-                <% } %>
-              </ul>
-      </body>
-</html>
+              <hr class="hr2">
+                <ul class='topic-loop'>
+                  <% for (let i = 0; i < posts.length; i++) { %>
+                  <li class='topic-loop'>
+                      <a class='topic-loop' href="/posts/<%=posts[i]._id%>"> <%=posts[i].tag%></a>
+                  </li>
+                  <% } %>
+                </ul>
+        </body>
+  </html>

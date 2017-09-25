@@ -229,6 +229,7 @@ hr {
   margin-left: 25px;
 }
 .delete-form .submit  {
+  font-family: 'Open Sans', sans-serif;
   width: 6%;
   color: #00008B;
   margin-left: 25px;
@@ -301,4 +302,7 @@ page7 comments index page
   font-size: 55px;
   font-weight: 700;
   text-align: center;
+}
+.hr2 {
+  margin: 0 auto;
 }

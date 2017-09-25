@@ -25,17 +25,17 @@
       <li role="presentation" class="active"><a href="/posts/">Posts</a></li>
     </ul>
 
-    <h2><%=comment.title%></h2></br>
+    <h3><%=comment.title%></h3></br>
 
-    <section>
+    <section class="tag-types">
       <%=comment.entry%>
     </section>
 
 
 
     <section>
-      <form action="/comments/<%=comment._id%>?_method=DELETE" method="post">
-        <input type="submit" value="Delete Comment"/>
+      <form class="delete-form" action="/comments/<%=comment._id%>?_method=DELETE" method="POST">
+        <input class="submit" type="submit" value="Delete Comment"/>
       </form>
     </section>
 

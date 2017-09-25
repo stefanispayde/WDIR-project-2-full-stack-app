@@ -3,6 +3,15 @@ const router = express.Router();
 const Post = require('../models/posts.js');
 const Comment = require('../models/comments.js');
 
+router.get('/', (req, res)=> {
+	Comment.find({}, (err, foundComments)=> {
+		res.render('comments/index.ejs', {
+			comments: foundComments
+		});
+	})
+});
+
+
 // reading/showing/getting all posts on new comments page
 router.get('/new', (req, res)=> {
   Post.find({}, (err, allPosts)=> {
@@ -10,14 +19,6 @@ router.get('/new', (req, res)=> {
       posts: allPosts
     });
   })
-});
-
-router.get('/', (req, res)=> {
-	Comment.find({}, (err, foundComments)=> {
-		res.render('comments/index.ejs', {
-			comments: foundComments
-		});
-	})
 });
 
 
