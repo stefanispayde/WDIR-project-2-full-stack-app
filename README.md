@@ -21,7 +21,7 @@ APP WISHLIST
 There are quite a few features I will continue working on to enhance this app and make it more user friendly.
 First thing I have begun working on is user authorization, giving the user and only the user the ability to delete or update their posts. They will also be allowed to delete any comments they do not want attached to a particular post.
 
-I am also categorizing posts into weeks and by topic. As of now they are all on the same show.ejs file, and it is starting to look messy and cluttered. Once the post is submitted, it goes to both the users show page and is categorized by week and topic on the posts/index page.
+I am also categorizing posts into weeks and by topic. As of now they are all on the same show.ejs file, and it is starting to look messy and cluttered. Once the post is submitted, it goes to both the users show page and is categorized by week and topic on the posts/index page. Currently writing code using moment.js to achieve this goal.
 
 Adding a thumbs up/thumbs down glyphicon would allow users to like or dislike posts and comments they have read.
 
