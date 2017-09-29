@@ -55,21 +55,23 @@ router.delete('/:id', (req, res)=> {
 
 });
 
+//updating to id route
+router.put('/:id', (req, res)=> {
+  Post.findByIdAndUpdate(req.params.id, req.body, (err, data)=> {
+    res.redirect('/posts')
+  });
+});
+
 // reading/showing/getting edit post view
 router.get('/:id/edit', (req, res)=> {
   Post.findById(req.params.id, (err, foundPost)=> {
     res.render('posts/edit.ejs', {
-      post:foundPost
+      post: foundPost
     });
-  });
+  })
 });
 
-//updating to id route
-router.put('/:id', (req, res)=> {
-  Post.findByIdAndUpdate(req.params.id, req.body, ()=> {     //deleted (err, foundPost)
-    res.redirect('/posts')
-  });
-});
+
 
 
 module.exports = router;

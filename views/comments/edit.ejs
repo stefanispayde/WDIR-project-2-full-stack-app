@@ -24,7 +24,7 @@
 
     <h2>Edit <%=comment.title%>'s info</h2>
 
-    <form action="/comments/<%=comment._id%>?_method=PUT" method="post">
+    <form action="/comments/<%=comment._id%>?_method=PUT" method="POST">
 				<select name="postId">
                     <% for(let i = 0; i < posts.length; i++) { %>
                         <option
