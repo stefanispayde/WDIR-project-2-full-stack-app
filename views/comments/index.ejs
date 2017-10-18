@@ -28,14 +28,14 @@
 
       <h3>Edit/Delete Comments</h3>
 
-      
-        <ul class='topic-loop'>
+
+        <ol class='topic-loop'>
           <% for (let i = 0; i < comments.length; i++) { %>
           <li class='topic-loop'>
               <a class='topic-loop' href="/comments/<%=comments[i]._id%>"> <%=comments[i].entry%></a>
           </li>
           <% } %>
-        </ul>
+        </ol>
 
     </main>
 
