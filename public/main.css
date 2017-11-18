@@ -289,7 +289,9 @@ page6 comments show page
 **************************/
 #page6 h3, .tag-types, input.submit {
   margin-left: 10px;
+  font-size: 22px;
 }
+
 
 /*************************
 page7 comments index page
